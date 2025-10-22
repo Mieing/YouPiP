@@ -1,5 +1,5 @@
-#import <version.h>
-#import "Header.h"
+//#import <YouTubeHeader/version.h>
+#import <YouTubeHeader/Header.h>
 #import <YouTubeHeader/YTAppSettingsSectionItemActionController.h>
 #import <YouTubeHeader/YTHotConfig.h>
 #import <YouTubeHeader/YTSettingsGroupData.h>
@@ -7,9 +7,11 @@
 #import <YouTubeHeader/YTSettingsSectionItemManager.h>
 #import <YouTubeHeader/YTSettingsViewController.h>
 
-#define LOC(x) [tweakBundle localizedStringForKey:x value:nil table:nil]
-
 static const NSInteger YouPiPSection = 200;
+
+#ifndef YOUTUBE_VERSION
+#define YOUTUBE_VERSION @""
+#endif
 
 @interface YTSettingsSectionItemManager (YouPiP)
 - (void)updateYouPiPSectionWithEntry:(id)entry;
@@ -109,7 +111,7 @@ extern NSBundle *YouPiPBundle();
         }
         settingItemId:0];
     [sectionItems addObject:miniPlayer];
-    if (IS_IOS_OR_NEWER(iOS_14_0)) {
+    if (@available(iOS 15.0, *)) {
         YTSettingsSectionItem *legacyPiP = [%c(YTSettingsSectionItem) switchItemWithTitle:LOC(@"LEGACY_PIP")
             titleDescription:LOC(@"LEGACY_PIP_DESC")
             accessibilityIdentifier:nil

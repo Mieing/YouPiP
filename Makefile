@@ -1,9 +1,9 @@
 ifeq ($(THEOS_PACKAGE_SCHEME),rootless)
-	TARGET = iphone:clang:latest:15.0
+	TARGET = iphone:clang:latest:15.6
 else ifeq ($(THEOS_PACKAGE_SCHEME),roothide)
-	TARGET = iphone:clang:latest:15.0
+	TARGET = iphone:clang:latest:15.6
 else
-	TARGET = iphone:clang:latest:11.0
+	TARGET = iphone:clang:latest:15.6
 endif
 ARCHS = arm64
 INSTALL_TARGET_PROCESSES = YouTube

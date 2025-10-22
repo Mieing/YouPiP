@@ -25,9 +25,9 @@
 #import <YouTubeHeader/YTTouchFeedbackController.h>
 #import <YouTubeHeader/YTUIResources.h>
 #import <YouTubeHeader/YTWatchViewController.h>
-#import "Header.h"
 #import "YouTubeHeader/Header.h"
-#import "YouTubeHeader/Init.x"
+#import "YouTubeHeader/Header.h"
+#import "Init.x"
 
 @interface YTMainAppControlsOverlayView (YouPiP)
 - (void)didPressPiP:(id)arg;
