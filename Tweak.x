@@ -1,5 +1,5 @@
 #import <version.h>
-#import <PSHeader/Misc.h>
+//#import <PSHeader/Misc.h>
 #import <YouTubeHeader/ASCollectionView.h>
 #import <YouTubeHeader/ELMCellNode.h>
 #import <YouTubeHeader/ELMContainerNode.h>
@@ -26,8 +26,8 @@
 #import <YouTubeHeader/YTUIResources.h>
 #import <YouTubeHeader/YTWatchViewController.h>
 #import "Header.h"
-#import "../YTVideoOverlay/Header.h"
-#import "../YTVideoOverlay/Init.x"
+#import "YouTubeHeader/Header.h"
+#import "YouTubeHeader/Init.x"
 
 @interface YTMainAppControlsOverlayView (YouPiP)
 - (void)didPressPiP:(id)arg;
